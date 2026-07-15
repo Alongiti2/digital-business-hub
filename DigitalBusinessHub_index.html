@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Digital Business Hub LLC | Launch. Connect. Grow Securely.</title>
+<meta name="description" content="Digital Business Hub helps entrepreneurs, small businesses, freelancers, and nonprofits launch professionally across the US and Canada with domains, websites, email, phone, AI receptionist, virtual address, and cybersecurity."/>
+<meta name="keywords" content="business launch, domain registration, website design, business email, virtual address, toll-free number, AI receptionist, cybersecurity, small business, US Canada"/>
+<meta name="author" content="Delphin Zaki"/>
+<meta property="og:title" content="Digital Business Hub LLC"/>
+<meta property="og:description" content="Launch. Connect. Grow Securely. — Your complete business launch platform."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://www.digitalbusinesshub.com"/>
+<link rel="canonical" href="https://www.digitalbusinesshub.com"/>
+<style>
+/* ── TOKENS ── */
+:root {
+  --ink:      #0B1120;
+  --deep:     #0F1E38;
+  --mid:      #1A3A6B;
+  --emerald:  #00C896;
+  --lime:     #7EE8A2;
+  --sky:      #38BDF8;
+  --gold:     #F5A623;
+  --white:    #FFFFFF;
+  --ice:      #EFF6FF;
+  --silver:   #94A3B8;
+  --muted:    #475569;
+  --card:     #111D35;
+  --border:   rgba(0,200,150,0.15);
+  --radius:   14px;
+  --t:        0.3s ease;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--ice);font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;font-size:16px;line-height:1.7;overflow-x:hidden}
+a{color:var(--emerald);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(11,17,32,0.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 5%;height:70px}
+.nav-logo{display:flex;align-items:center;gap:10px;font-size:1rem;font-weight:800;color:var(--white);letter-spacing:.3px}
+.nav-logo svg{width:40px;height:40px;flex-shrink:0}
+.nav-links{display:flex;gap:26px;list-style:none}
+.nav-links a{color:var(--silver);font-size:.875rem;font-weight:500;letter-spacing:.4px;transition:color var(--t)}
+.nav-links a:hover{color:var(--emerald);text-decoration:none}
+.nav-cta{background:var(--emerald);color:var(--ink)!important;padding:8px 20px;border-radius:8px;font-weight:700!important;transition:all var(--t)!important}
+.nav-cta:hover{background:var(--lime)!important;color:var(--ink)!important;text-decoration:none!important}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.hamburger span{width:24px;height:2px;background:var(--silver);border-radius:2px;display:block;transition:var(--t)}
+.mobile-menu{display:none;flex-direction:column;gap:0;background:var(--deep);border-top:1px solid var(--border)}
+.mobile-menu a{color:var(--silver);font-size:.95rem;padding:14px 5%;border-bottom:1px solid var(--border);display:block}
+.mobile-menu.open{display:flex}
+
+/* ── HERO ── */
+#hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:120px 5% 80px;position:relative;overflow:hidden;background:radial-gradient(ellipse 90% 70% at 50% 0%,#0D2A5C 0%,var(--ink) 65%)}
+.hero-grid{position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(0,200,150,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,200,150,.04) 1px,transparent 1px);background-size:48px 48px}
+.hero-orb{position:absolute;border-radius:50%;pointer-events:none;filter:blur(60px)}
+.hero-orb-1{width:400px;height:400px;background:rgba(0,200,150,.08);top:-80px;right:-80px}
+.hero-orb-2{width:300px;height:300px;background:rgba(56,189,248,.06);bottom:60px;left:-60px}
+.hero-content{max-width:780px;text-align:center;position:relative;z-index:1}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;font-size:.72rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--emerald);border:1px solid var(--border);padding:6px 18px;border-radius:20px;margin-bottom:28px}
+.badge-dot{width:6px;height:6px;background:var(--emerald);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.hero-title{font-size:clamp(2.2rem,5.5vw,4rem);font-weight:900;line-height:1.1;color:var(--white);margin-bottom:24px;letter-spacing:-.5px}
+.hero-title .accent{color:var(--emerald)}
+.hero-title .accent2{color:var(--sky)}
+.hero-sub{font-size:1.1rem;color:var(--silver);max-width:580px;margin:0 auto 16px;line-height:1.7}
+.hero-tagline{font-size:.78rem;letter-spacing:4px;text-transform:uppercase;color:var(--muted);margin-bottom:40px}
+.hero-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn-primary{background:var(--emerald);color:var(--ink);padding:14px 32px;border-radius:10px;font-weight:800;font-size:.95rem;transition:all var(--t);border:none;cursor:pointer;display:inline-block;letter-spacing:.3px}
+.btn-primary:hover{background:var(--lime);transform:translateY(-2px);text-decoration:none;color:var(--ink)}
+.btn-outline{background:transparent;color:var(--emerald);padding:14px 32px;border-radius:10px;font-weight:600;font-size:.95rem;border:2px solid var(--emerald);transition:all var(--t);cursor:pointer;display:inline-block}
+.btn-outline:hover{background:var(--emerald);color:var(--ink);transform:translateY(-2px);text-decoration:none}
+.hero-icon{width:100px;height:100px;margin:0 auto 36px;animation:float 4s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+
+/* ── STATS BAR ── */
+.stats-bar{background:var(--card);border-top:1px solid var(--border);border-bottom:1px solid var(--border);display:grid;grid-template-columns:repeat(4,1fr)}
+.stat-item{padding:24px 20px;text-align:center;border-right:1px solid var(--border)}
+.stat-item:last-child{border-right:none}
+.stat-num{font-size:1.9rem;font-weight:900;color:var(--white);line-height:1}
+.stat-num span{color:var(--emerald)}
+.stat-label{font-size:.75rem;color:var(--silver);margin-top:4px;letter-spacing:.5px}
+
+/* ── SECTIONS ── */
+section{padding:90px 5%}
+.section-label{font-size:.7rem;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--emerald);margin-bottom:10px}
+.section-title{font-size:clamp(1.7rem,3vw,2.6rem);font-weight:900;color:var(--white);margin-bottom:14px;letter-spacing:-.3px}
+.section-sub{font-size:1rem;color:var(--silver);max-width:600px;margin-bottom:52px;line-height:1.7}
+.divider{width:48px;height:3px;background:linear-gradient(90deg,var(--emerald),var(--sky));border-radius:2px;margin-bottom:18px}
+
+/* ── HOW IT WORKS ── */
+#how{background:var(--card);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.steps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;position:relative}
+.steps-grid::before{content:'';position:absolute;top:36px;left:10%;right:10%;height:2px;background:linear-gradient(90deg,var(--emerald),var(--sky),var(--emerald));opacity:.25;z-index:0}
+.step-card{text-align:center;padding:32px 20px;position:relative;z-index:1}
+.step-num{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--emerald),var(--sky));display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:900;color:var(--ink);margin:0 auto 16px}
+.step-card h3{font-size:.95rem;font-weight:700;color:var(--white);margin-bottom:8px}
+.step-card p{font-size:.82rem;color:var(--silver);line-height:1.6}
+
+/* ── SERVICES ── */
+#services{background:var(--ink)}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:22px}
+.service-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:30px 26px;transition:border-color var(--t),transform var(--t);position:relative;overflow:hidden;cursor:default}
+.service-card::after{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--emerald),var(--sky));transform:scaleX(0);transform-origin:left;transition:transform var(--t)}
+.service-card:hover{border-color:var(--emerald);transform:translateY(-4px)}
+.service-card:hover::after{transform:scaleX(1)}
+.service-icon{font-size:2rem;margin-bottom:14px;display:block}
+.service-card h3{font-size:1rem;font-weight:700;color:var(--white);margin-bottom:10px}
+.service-card ul{list-style:none;padding:0}
+.service-card ul li{font-size:.82rem;color:var(--silver);padding:3px 0;display:flex;align-items:flex-start;gap:7px}
+.service-card ul li::before{content:'›';color:var(--emerald);font-weight:700;flex-shrink:0}
+
+/* ── WHO WE SERVE ── */
+#clients{background:var(--card)}
+.clients-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px}
+.client-chip{background:rgba(0,200,150,.07);border:1px solid var(--border);border-radius:10px;padding:14px 16px;font-size:.82rem;color:var(--silver);font-weight:500;display:flex;align-items:center;gap:10px;transition:all var(--t)}
+.client-chip:hover{background:rgba(0,200,150,.14);color:var(--white);border-color:var(--emerald)}
+.client-chip span{font-size:1.1rem}
+
+/* ── PRICING ── */
+#pricing{background:var(--ink)}
+.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px;align-items:stretch}
+.price-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:36px 28px;display:flex;flex-direction:column;transition:border-color var(--t);position:relative}
+.price-card.featured{border-color:var(--emerald);background:linear-gradient(160deg,#0D2A3C 0%,var(--card) 100%)}
+.price-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--emerald);color:var(--ink);font-size:.68rem;font-weight:900;letter-spacing:2px;text-transform:uppercase;padding:4px 16px;border-radius:20px}
+.price-name{font-size:.75rem;letter-spacing:3px;text-transform:uppercase;color:var(--emerald);margin-bottom:6px}
+.price-setup{font-size:.8rem;color:var(--silver);margin-bottom:2px}
+.price-amount{font-size:2rem;font-weight:900;color:var(--white);margin-bottom:2px}
+.price-period{font-size:.82rem;color:var(--silver);margin-bottom:20px}
+.price-desc{font-size:.85rem;color:var(--silver);margin-bottom:22px;flex:1;line-height:1.6}
+.price-features{list-style:none;padding:0;margin-bottom:28px}
+.price-features li{font-size:.82rem;color:var(--silver);padding:5px 0;border-bottom:1px solid rgba(255,255,255,.04);display:flex;align-items:flex-start;gap:7px}
+.price-features li::before{content:'✓';color:var(--emerald);font-weight:700;flex-shrink:0}
+.price-cta{display:block;text-align:center;padding:12px;border-radius:9px;font-weight:700;font-size:.875rem;transition:all var(--t);border:2px solid var(--emerald);color:var(--emerald)}
+.price-card.featured .price-cta{background:var(--emerald);color:var(--ink);border-color:var(--emerald)}
+.price-cta:hover{background:var(--emerald);color:var(--ink);text-decoration:none}
+
+/* ── WHY US ── */
+#why{background:var(--card)}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
+.why-card{padding:26px 22px;border-radius:var(--radius);background:rgba(0,200,150,.05);border:1px solid var(--border);transition:border-color var(--t)}
+.why-card:hover{border-color:var(--emerald)}
+.why-icon{font-size:1.8rem;margin-bottom:12px;display:block}
+.why-card h3{font-size:.95rem;font-weight:700;color:var(--white);margin-bottom:6px}
+.why-card p{font-size:.82rem;color:var(--silver);line-height:1.6}
+
+/* ── MARKETS ── */
+#markets{background:var(--ink)}
+.markets-inner{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;max-width:960px;margin:0 auto}
+.market-col h3{font-size:1rem;font-weight:700;color:var(--white);margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.market-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:8px}
+.market-list li{font-size:.85rem;color:var(--silver);display:flex;align-items:center;gap:8px;padding:8px 12px;background:var(--card);border:1px solid var(--border);border-radius:8px}
+.market-list li::before{content:'📍';font-size:.9rem;flex-shrink:0}
+
+/* ── BLOG ── */
+#blog{background:var(--card)}
+.blog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;margin-bottom:40px}
+.blog-card{background:var(--ink);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:border-color var(--t),transform var(--t);display:flex;flex-direction:column}
+.blog-card:hover{border-color:var(--emerald);transform:translateY(-4px)}
+.blog-top{height:5px;background:linear-gradient(90deg,var(--emerald),var(--sky))}
+.blog-body{padding:24px;flex:1;display:flex;flex-direction:column}
+.blog-tag{font-size:.65rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--ink);background:var(--emerald);padding:2px 10px;border-radius:20px;display:inline-block;margin-bottom:10px}
+.blog-card h3{font-size:.95rem;font-weight:700;color:var(--white);margin-bottom:8px;line-height:1.4;flex:1}
+.blog-card p{font-size:.8rem;color:var(--silver);line-height:1.6}
+.blog-footer{padding:14px 24px;border-top:1px solid rgba(255,255,255,.05);display:flex;justify-content:space-between;align-items:center}
+.blog-author{font-size:.75rem;color:var(--silver)}
+.blog-link{font-size:.75rem;color:var(--emerald);font-weight:600}
+
+/* ── CONTACT ── */
+#contact{background:radial-gradient(ellipse 80% 60% at 50% 100%,#0D2A3C 0%,var(--ink) 70%)}
+.contact-inner{max-width:680px;margin:0 auto;text-align:center}
+.contact-form{margin-top:40px;display:flex;flex-direction:column;gap:16px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-input{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px 18px;color:var(--ice);font-size:.95rem;font-family:inherit;transition:border-color var(--t);outline:none;width:100%}
+.form-input:focus{border-color:var(--emerald)}
+.form-input::placeholder{color:var(--muted)}
+textarea.form-input{resize:vertical;min-height:130px}
+.form-submit{background:var(--emerald);color:var(--ink);border:none;border-radius:10px;padding:16px;font-size:1rem;font-weight:800;cursor:pointer;transition:all var(--t);font-family:inherit;letter-spacing:.3px}
+.form-submit:hover{background:var(--lime)}
+.contact-note{font-size:.78rem;color:var(--muted);margin-top:8px}
+.lang-badge{display:inline-flex;gap:10px;margin-top:12px}
+.lang-badge span{font-size:.72rem;padding:3px 12px;border-radius:20px;border:1px solid var(--border);color:var(--silver)}
+
+/* ── FOOTER ── */
+footer{background:#060F1E;border-top:1px solid var(--border);padding:52px 5% 32px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.footer-brand p{font-size:.82rem;color:var(--silver);margin-top:12px;max-width:260px;line-height:1.7}
+.footer-col h4{font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--emerald);margin-bottom:14px}
+.footer-col ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:8px}
+.footer-col ul li a{font-size:.82rem;color:var(--silver);transition:color var(--t)}
+.footer-col ul li a:hover{color:var(--emerald);text-decoration:none}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-bottom p{font-size:.75rem;color:var(--muted)}
+.footer-tagline{font-size:.72rem;color:var(--emerald);letter-spacing:2px}
+.footer-langs{display:flex;gap:8px}
+.footer-langs span{font-size:.72rem;padding:2px 10px;border:1px solid var(--border);border-radius:20px;color:var(--silver)}
+
+/* ── NEWSLETTER ── */
+.newsletter-box{background:var(--ink);border:1px solid var(--border);border-radius:var(--radius);padding:36px 28px;text-align:center;max-width:520px;margin:0 auto}
+.newsletter-box h3{font-size:1.1rem;font-weight:700;color:var(--white);margin-bottom:8px}
+.newsletter-box p{font-size:.875rem;color:var(--silver);margin-bottom:20px}
+.newsletter-form{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.newsletter-input{flex:1;min-width:200px;background:var(--card);border:1px solid var(--border);border-radius:8px;padding:11px 16px;color:var(--ice);font-size:.9rem;font-family:inherit;outline:none;transition:border-color var(--t)}
+.newsletter-input:focus{border-color:var(--emerald)}
+.newsletter-input::placeholder{color:var(--muted)}
+.newsletter-btn{background:var(--emerald);color:var(--ink);border:none;border-radius:8px;padding:11px 22px;font-size:.875rem;font-weight:700;cursor:pointer;font-family:inherit;transition:all var(--t)}
+.newsletter-btn:hover{background:var(--lime)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:768px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .stats-bar{grid-template-columns:1fr 1fr}
+  .stat-item:nth-child(2){border-right:none}
+  .form-row{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .markets-inner{grid-template-columns:1fr}
+  .steps-grid::before{display:none}
+}
+@media(max-width:480px){
+  .stats-bar{grid-template-columns:1fr}
+  .stat-item{border-right:none}
+  .footer-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav>
+  <div class="nav-logo">
+    <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+      <!-- Hub circle -->
+      <circle cx="40" cy="40" r="36" fill="#0F1E38" stroke="#00C896" stroke-width="2"/>
+      <!-- Center node -->
+      <circle cx="40" cy="40" r="7" fill="#00C896"/>
+      <!-- Spoke nodes -->
+      <circle cx="40" cy="14" r="5" fill="#38BDF8"/>
+      <circle cx="62" cy="26" r="5" fill="#38BDF8"/>
+      <circle cx="62" cy="54" r="5" fill="#38BDF8"/>
+      <circle cx="40" cy="66" r="5" fill="#38BDF8"/>
+      <circle cx="18" cy="54" r="5" fill="#38BDF8"/>
+      <circle cx="18" cy="26" r="5" fill="#38BDF8"/>
+      <!-- Spokes -->
+      <line x1="40" y1="33" x2="40" y2="19" stroke="#00C896" stroke-width="1.8" stroke-opacity=".7"/>
+      <line x1="46" y1="36" x2="57" y2="29" stroke="#00C896" stroke-width="1.8" stroke-opacity=".7"/>
+      <line x1="46" y1="44" x2="57" y2="51" stroke="#00C896" stroke-width="1.8" stroke-opacity=".7"/>
+      <line x1="40" y1="47" x2="40" y2="61" stroke="#00C896" stroke-width="1.8" stroke-opacity=".7"/>
+      <line x1="34" y1="44" x2="23" y2="51" stroke="#00C896" stroke-width="1.8" stroke-opacity=".7"/>
+      <line x1="34" y1="36" x2="23" y2="29" stroke="#00C896" stroke-width="1.8" stroke-opacity=".7"/>
+      <!-- DBH letters -->
+      <text x="40" y="44" text-anchor="middle" font-family="Arial" font-weight="900" font-size="8" fill="#FFFFFF">DBH</text>
+    </svg>
+    <span>Digital Business <span style="color:var(--emerald)">Hub</span></span>
+  </div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#how">How It Works</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#clients">Who We Serve</a></li>
+    <li><a href="#blog">Blog</a></li>
+    <li><a href="#contact" class="nav-cta">Get Started Free</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#how">How It Works</a>
+  <a href="#services">Services</a>
+  <a href="#pricing">Pricing</a>
+  <a href="#clients">Who We Serve</a>
+  <a href="#blog">Blog</a>
+  <a href="#contact">Get Started Free</a>
+</div>
+
+<!-- ── HERO ── -->
+<section id="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
+  <div class="hero-content">
+    <!-- animated hub logo -->
+    <div class="hero-icon">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" width="100" height="100">
+        <circle cx="50" cy="50" r="46" fill="#0F1E38" stroke="#00C896" stroke-width="2.5"/>
+        <circle cx="50" cy="50" r="10" fill="#00C896"/>
+        <circle cx="50" cy="12" r="7" fill="#38BDF8"/>
+        <circle cx="80" cy="30" r="7" fill="#38BDF8"/>
+        <circle cx="80" cy="70" r="7" fill="#38BDF8"/>
+        <circle cx="50" cy="88" r="7" fill="#38BDF8"/>
+        <circle cx="20" cy="70" r="7" fill="#38BDF8"/>
+        <circle cx="20" cy="30" r="7" fill="#38BDF8"/>
+        <line x1="50" y1="40" x2="50" y2="19" stroke="#00C896" stroke-width="2" stroke-opacity=".6"/>
+        <line x1="59" y1="44" x2="73" y2="36" stroke="#00C896" stroke-width="2" stroke-opacity=".6"/>
+        <line x1="59" y1="56" x2="73" y2="64" stroke="#00C896" stroke-width="2" stroke-opacity=".6"/>
+        <line x1="50" y1="60" x2="50" y2="81" stroke="#00C896" stroke-width="2" stroke-opacity=".6"/>
+        <line x1="41" y1="56" x2="27" y2="64" stroke="#00C896" stroke-width="2" stroke-opacity=".6"/>
+        <line x1="41" y1="44" x2="27" y2="36" stroke="#00C896" stroke-width="2" stroke-opacity=".6"/>
+        <text x="50" y="54" text-anchor="middle" font-family="Arial" font-weight="900" font-size="10" fill="#FFFFFF">DBH</text>
+      </svg>
+    </div>
+    <div class="hero-badge"><span class="badge-dot"></span> Now Serving US &amp; Canada · English &amp; French</div>
+    <h1 class="hero-title">
+      Your Complete<br/>
+      <span class="accent">Business Launch</span><br/>
+      <span class="accent2">Platform</span>
+    </h1>
+    <p class="hero-sub">Domain · Website · Email · Phone · Virtual Address · AI Receptionist · Cybersecurity — everything your business needs, in one place.</p>
+    <p class="hero-tagline">Launch &nbsp;·&nbsp; Connect &nbsp;·&nbsp; Grow Securely</p>
+    <div class="hero-buttons">
+      <a href="#pricing" class="btn-primary">See Packages →</a>
+      <a href="#contact" class="btn-outline">Free Consultation</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── STATS ── -->
+<div class="stats-bar">
+  <div class="stat-item"><div class="stat-num">12<span>+</span></div><div class="stat-label">Services in One Package</div></div>
+  <div class="stat-item"><div class="stat-num"><span>$</span>29</div><div class="stat-label">Starting Per Month</div></div>
+  <div class="stat-item"><div class="stat-num">2</div><div class="stat-label">Countries Served (US &amp; CA)</div></div>
+  <div class="stat-item"><div class="stat-num">2</div><div class="stat-label">Languages (EN &amp; FR)</div></div>
+</div>
+
+<!-- ── HOW IT WORKS ── -->
+<section id="how">
+  <div style="text-align:center;margin-bottom:52px">
+    <div class="section-label">Simple Process</div>
+    <div class="divider" style="margin:0 auto 16px"></div>
+    <h2 class="section-title">Launch Your Business in 4 Steps</h2>
+    <p class="section-sub" style="margin:0 auto">We handle the technical setup so you can focus on growing your business.</p>
+  </div>
+  <div class="steps-grid">
+    <div class="step-card">
+      <div class="step-num">1</div>
+      <h3>Choose Your Package</h3>
+      <p>Pick the plan that fits your business size and budget. No technical knowledge required.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-num">2</div>
+      <h3>We Set Everything Up</h3>
+      <p>Our team registers your domain, builds your site, configures email, phone, and security for you.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-num">3</div>
+      <h3>Go Live Professionally</h3>
+      <p>Your business identity is complete — website, email, phone, and address all active and working.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-num">4</div>
+      <h3>Grow with Support</h3>
+      <p>We stay with you — monthly updates, security monitoring, and real human support always available.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── SERVICES ── -->
+<section id="services">
+  <div class="section-label">What We Provide</div>
+  <div class="divider"></div>
+  <h2 class="section-title">Everything Your Business Needs</h2>
+  <p class="section-sub">One company. One bill. Twelve professional services delivered and managed for you.</p>
+  <div class="services-grid">
+
+    <div class="service-card">
+      <span class="service-icon">🌐</span>
+      <h3>Domain Registration &amp; Management</h3>
+      <ul>
+        <li>Search &amp; register .com .net .org .ca domains</li>
+        <li>DNS &amp; SSL certificate setup</li>
+        <li>Domain privacy protection</li>
+        <li>Multi-factor authentication</li>
+        <li>Auto-renewal management</li>
+        <li>Domain transfer assistance</li>
+      </ul>
+    </div>
+
+    <div class="service-card">
+      <span class="service-icon">💻</span>
+      <h3>Website &amp; Hosting Packages</h3>
+      <ul>
+        <li>Starter: 1-page professional site</li>
+        <li>Business: 5–10 page full website</li>
+        <li>E-Commerce: full online store</li>
+        <li>Mobile-friendly &amp; fast loading</li>
+        <li>Appointment booking integration</li>
+        <li>Monthly updates included</li>
+      </ul>
+    </div>
+
+    <div class="service-card">
+      <span class="service-icon">📧</span>
+      <h3>Professional Business Email</h3>
+      <ul>
+        <li>info@ · support@ · sales@ · ceo@</li>
+        <li>SPF, DKIM &amp; DMARC configuration</li>
+        <li>Auto-reply message setup</li>
+        <li>Email signature design</li>
+        <li>Spam &amp; phishing protection</li>
+        <li>Mobile &amp; Outlook/Gmail setup</li>
+      </ul>
+    </div>
+
+    <div class="service-card">
+      <span class="service-icon">📞</span>
+      <h3>Toll-Free 800 Phone Number</h3>
+      <ul>
+        <li>800/833/844/855/866/877/888 numbers</li>
+        <li>Call forwarding to your cell</li>
+        <li>Voicemail-to-email delivery</li>
+        <li>Business hours routing</li>
+        <li>SMS business messaging</li>
+        <li>Bilingual EN/FR greeting</li>
+      </ul>
+    </div>
+
+    <div class="service-card">
+      <span class="service-icon">🤖</span>
+      <h3>AI Receptionist &amp; Automation</h3>
+      <ul>
+        <li>24/7 automated call answering</li>
+        <li>Department call routing</li>
+        <li>Appointment booking by phone</li>
+        <li>FAQ auto-response system</li>
+        <li>Missed-call SMS auto-reply</li>
+        <li>English &amp; French conversations</li>
+      </ul>
+    </div>
+
+    <div class="service-card">
+      <span class="service-icon">🏢</span>
+      <h3>Virtual Business Address</h3>
+      <ul>
+        <li>Professional US &amp; CA street address</li>
+        <li>Mail scanning &amp; forwarding</li>
+        <li>Package receiving</li>
+        <li>Meeting room access (partners)</li>
+        <li>USPS Form 1583 guidance</li>
+        <li>Registered agent referral</li>
+      </ul>
+    </div>
+
+    <div class="service-card">
+      <span class="service-icon">📅</span>
+      <h3>Appointment Booking System</h3>
+      <ul>
+        <li>Online booking calendar</li>
+        <li>Automated confirmations</li>
+        <li>SMS &amp; email reminders</li>
+        <li>Payment links at booking</li>
+        <li>Cancellation management</li>
+        <li>Google Calendar integration</li>
+      </ul>
+    </div>
+
+    <div class="service-card">
+      <span class="service-icon">🛡️</span>
+      <h3>Cybersecurity Protection</h3>
+      <ul>
+        <li>SSL certificate &amp; HTTPS setup</li>
+        <li>Website malware scanning</li>
+        <li>Firewall configuration</li>
+        <li>Dark-web exposure monitoring</li>
+        <li>Password manager setup</li>
+        <li>Security awareness training</li>
+      </ul>
+    </div>
+
+    <div class="service-card">
+      <span class="service-icon">📊</span>
+      <h3>Branding &amp; Marketing Tools</h3>
+      <ul>
+        <li>Logo design &amp; brand kit</li>
+        <li>Google Business Profile setup</li>
+        <li>Social media account creation</li>
+        <li>Basic SEO configuration</li>
+        <li>Analytics dashboard</li>
+        <li>Email marketing setup</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── WHO WE SERVE ── -->
+<section id="clients">
+  <div class="section-label">Who We Serve</div>
+  <div class="divider"></div>
+  <h2 class="section-title">Built for Every Entrepreneur</h2>
+  <p class="section-sub">From home-based startups to growing small businesses — if you need a professional presence, we help you build it.</p>
+  <div class="clients-grid">
+    <div class="client-chip"><span>🏗️</span> New LLC Owners</div>
+    <div class="client-chip"><span>🔧</span> Independent Contractors</div>
+    <div class="client-chip"><span>🧹</span> Cleaning Companies</div>
+    <div class="client-chip"><span>🚛</span> Trucking Businesses</div>
+    <div class="client-chip"><span>🏠</span> Home-Care Services</div>
+    <div class="client-chip"><span>💼</span> Consultants</div>
+    <div class="client-chip"><span>⚖️</span> Small Law Firms</div>
+    <div class="client-chip"><span>🏥</span> Health &amp; Wellness</div>
+    <div class="client-chip"><span>💇</span> Hair Salons &amp; Barbers</div>
+    <div class="client-chip"><span>🏡</span> Real Estate Agents</div>
+    <div class="client-chip"><span>🛒</span> Online Stores</div>
+    <div class="client-chip"><span>🍽️</span> Restaurants</div>
+    <div class="client-chip"><span>💙</span> Nonprofits &amp; Churches</div>
+    <div class="client-chip"><span>📋</span> Tax Preparers</div>
+    <div class="client-chip"><span>🌍</span> Immigrant Entrepreneurs</div>
+    <div class="client-chip"><span>🇫🇷</span> French-Speaking Owners</div>
+    <div class="client-chip"><span>🇨🇦</span> Canadian Businesses</div>
+    <div class="client-chip"><span>🇺🇸</span> US Entrepreneurs</div>
+    <div class="client-chip"><span>🔒</span> Cybersecurity Firms</div>
+    <div class="client-chip"><span>💻</span> Freelancers</div>
+  </div>
+</section>
+
+<!-- ── PRICING ── -->
+<section id="pricing">
+  <div class="section-label">Transparent Pricing</div>
+  <div class="divider"></div>
+  <h2 class="section-title">Simple, All-Inclusive Packages</h2>
+  <p class="section-sub">No hidden fees. No confusing invoices. One package, everything included and set up for you.</p>
+  <div class="pricing-grid">
+
+    <div class="price-card">
+      <div class="price-name">Startup</div>
+      <div class="price-setup">$99 setup fee</div>
+      <div class="price-amount">$29<span style="font-size:1rem;font-weight:400;color:var(--silver)">/mo</span></div>
+      <div class="price-period">billed monthly · no contract</div>
+      <p class="price-desc">Perfect for home-based businesses, freelancers, and contractors just getting started professionally.</p>
+      <ul class="price-features">
+        <li>Domain connection</li>
+        <li>1-page professional website</li>
+        <li>1 business email address</li>
+        <li>Basic SSL &amp; security</li>
+        <li>Contact form</li>
+        <li>Basic logo</li>
+        <li>Phone forwarding setup</li>
+        <li>Monthly support</li>
+      </ul>
+      <a href="#contact" class="price-cta">Get Started</a>
+    </div>
+
+    <div class="price-card featured">
+      <div class="price-badge">Most Popular</div>
+      <div class="price-name">Business Professional</div>
+      <div class="price-setup">$299 setup fee</div>
+      <div class="price-amount">$79<span style="font-size:1rem;font-weight:400;color:var(--silver)">/mo</span></div>
+      <div class="price-period">billed monthly · no contract</div>
+      <p class="price-desc">For growing businesses that need a complete professional identity — website, email, phone, and security.</p>
+      <ul class="price-features">
+        <li>Domain registration &amp; setup</li>
+        <li>5-page professional website</li>
+        <li>3 business email accounts</li>
+        <li>Toll-free or local phone number</li>
+        <li>Voicemail-to-email</li>
+        <li>Auto-reply email setup</li>
+        <li>Appointment booking</li>
+        <li>Google Business Profile</li>
+        <li>Basic cybersecurity protection</li>
+        <li>Monthly website updates</li>
+      </ul>
+      <a href="#contact" class="price-cta">Get Started</a>
+    </div>
+
+    <div class="price-card">
+      <div class="price-name">Business Growth</div>
+      <div class="price-setup">$599 setup fee</div>
+      <div class="price-amount">$149<span style="font-size:1rem;font-weight:400;color:var(--silver)">/mo</span></div>
+      <div class="price-period">billed monthly · no contract</div>
+      <p class="price-desc">Full automation, AI receptionist, CRM, and security monitoring for businesses ready to scale.</p>
+      <ul class="price-features">
+        <li>Professional multi-page website</li>
+        <li>5 business email accounts</li>
+        <li>AI receptionist &amp; call routing</li>
+        <li>Toll-free 800 number</li>
+        <li>Appointment scheduling</li>
+        <li>CRM setup</li>
+        <li>Online payment links</li>
+        <li>Virtual address referral</li>
+        <li>Monthly cybersecurity scan</li>
+        <li>Priority technical support</li>
+      </ul>
+      <a href="#contact" class="price-cta">Get Started</a>
+    </div>
+
+    <div class="price-card">
+      <div class="price-name">Secure Enterprise</div>
+      <div class="price-setup">$1,500 setup fee</div>
+      <div class="price-amount">$399<span style="font-size:1rem;font-weight:400;color:var(--silver)">/mo</span></div>
+      <div class="price-period">billed monthly · no contract</div>
+      <p class="price-desc">Advanced website, full automation, security monitoring, and a dedicated account manager.</p>
+      <ul class="price-features">
+        <li>Advanced website or online store</li>
+        <li>10+ business email accounts</li>
+        <li>AI receptionist &amp; CRM</li>
+        <li>Security monitoring</li>
+        <li>Backup &amp; phishing protection</li>
+        <li>Employee security training</li>
+        <li>Monthly reporting</li>
+        <li>Priority response</li>
+        <li>Dedicated account manager</li>
+        <li>Legal document templates</li>
+      </ul>
+      <a href="#contact" class="price-cta">Contact Us</a>
+    </div>
+
+  </div>
+  <p style="text-align:center;color:var(--muted);font-size:.82rem;margin-top:28px">
+    Hourly consulting also available · Custom quotes on request · <a href="#contact">Contact us to discuss your needs</a>
+  </p>
+</section>
+
+<!-- ── WHY US ── -->
+<section id="why">
+  <div class="section-label">Why Choose Us</div>
+  <div class="divider"></div>
+  <h2 class="section-title">We Don't Just Sell Domains</h2>
+  <p class="section-sub">We launch complete, professional, secure businesses — done for you, with real human support.</p>
+  <div class="why-grid">
+    <div class="why-card">
+      <span class="why-icon">🎯</span>
+      <h3>Done-For-You Setup</h3>
+      <p>We handle domain, website, email, phone, and security for you. No technical knowledge needed.</p>
+    </div>
+    <div class="why-card">
+      <span class="why-icon">🌎</span>
+      <h3>US &amp; Canada Coverage</h3>
+      <p>Serving entrepreneurs across all 50 US states and Canadian provinces with full remote delivery.</p>
+    </div>
+    <div class="why-card">
+      <span class="why-icon">🇫🇷</span>
+      <h3>Bilingual EN &amp; FR</h3>
+      <p>Full service in English and French — the only business-launch platform with bilingual expert support.</p>
+    </div>
+    <div class="why-card">
+      <span class="why-icon">🔒</span>
+      <h3>Cybersecurity Built In</h3>
+      <p>Every package includes security basics — SSL, email protection, firewall, and malware scanning.</p>
+    </div>
+    <div class="why-card">
+      <span class="why-icon">🤖</span>
+      <h3>AI Receptionist Included</h3>
+      <p>Your business answers calls 24/7 professionally — even when you are busy or sleeping.</p>
+    </div>
+    <div class="why-card">
+      <span class="why-icon">💬</span>
+      <h3>Real Human Support</h3>
+      <p>You always have a real person to call, email, or chat with — not just a chatbot or a help article.</p>
+    </div>
+    <div class="why-card">
+      <span class="why-icon">📦</span>
+      <h3>Everything in One Place</h3>
+      <p>Domain, website, email, phone, address, booking, security — one company, one monthly bill.</p>
+    </div>
+    <div class="why-card">
+      <span class="why-icon">💰</span>
+      <h3>Affordable &amp; Transparent</h3>
+      <p>No hidden fees, no confusing upsells. Clear pricing, no long-term lock-ins, cancel anytime.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── MARKETS ── -->
+<section id="markets">
+  <div style="text-align:center;margin-bottom:44px">
+    <div class="section-label">Our Markets</div>
+    <div class="divider" style="margin:0 auto 16px"></div>
+    <h2 class="section-title">Serving Communities Across North America</h2>
+    <p class="section-sub" style="margin:0 auto">Local expertise. National reach. We serve entrepreneurs wherever they are.</p>
+  </div>
+  <div class="markets-inner">
+    <div class="market-col">
+      <h3>🇺🇸 United States</h3>
+      <ul class="market-list">
+        <li>Seattle, Washington</li>
+        <li>Bellevue, Washington</li>
+        <li>Federal Way, Washington</li>
+        <li>Tacoma, Washington</li>
+        <li>Kent &amp; Auburn, Washington</li>
+        <li>Covington, Washington</li>
+        <li>All 50 US States (remote)</li>
+      </ul>
+    </div>
+    <div class="market-col">
+      <h3>🇨🇦 Canada</h3>
+      <ul class="market-list">
+        <li>Vancouver, British Columbia</li>
+        <li>Toronto, Ontario</li>
+        <li>Montreal, Quebec</li>
+        <li>Calgary, Alberta</li>
+        <li>Ottawa, Ontario</li>
+        <li>Edmonton, Alberta</li>
+        <li>All Canadian Provinces (remote)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ── BLOG ── -->
+<section id="blog">
+  <div class="section-label">Resources &amp; Insights</div>
+  <div class="divider"></div>
+  <h2 class="section-title">Business Launch Blog</h2>
+  <p class="section-sub">Practical guides for entrepreneurs launching and growing their businesses across the US and Canada.</p>
+  <div class="blog-grid">
+
+    <div class="blog-card">
+      <div class="blog-top"></div>
+      <div class="blog-body">
+        <span class="blog-tag">Getting Started</span>
+        <h3>How to Launch a Professional Business Online in 7 Days — Even Without Technical Skills</h3>
+        <p>A step-by-step walkthrough showing how any entrepreneur can have a complete business identity in less than a week.</p>
+      </div>
+      <div class="blog-footer">
+        <span class="blog-author">Digital Business Hub</span>
+        <a href="#contact" class="blog-link">Read more →</a>
+      </div>
+    </div>
+
+    <div class="blog-card">
+      <div class="blog-top" style="background:linear-gradient(90deg,#38BDF8,#00C896)"></div>
+      <div class="blog-body">
+        <span class="blog-tag" style="background:#38BDF8">Virtual Address</span>
+        <h3>Virtual Business Address vs. Home Address — What Every LLC Owner Needs to Know</h3>
+        <p>Why using your home address for your LLC creates risks — and how a virtual address protects your privacy and looks more professional.</p>
+      </div>
+      <div class="blog-footer">
+        <span class="blog-author">Digital Business Hub</span>
+        <a href="#contact" class="blog-link">Read more →</a>
+      </div>
+    </div>
+
+    <div class="blog-card">
+      <div class="blog-top" style="background:linear-gradient(90deg,#F5A623,#00C896)"></div>
+      <div class="blog-body">
+        <span class="blog-tag" style="background:#F5A623;color:#0B1120">AI Phone</span>
+        <h3>Why Every Small Business Needs an AI Receptionist in 2025 — Not Just a Voicemail</h3>
+        <p>Customers hang up on voicemail. An AI receptionist answers 24/7, books appointments, and routes calls professionally.</p>
+      </div>
+      <div class="blog-footer">
+        <span class="blog-author">Digital Business Hub</span>
+        <a href="#contact" class="blog-link">Read more →</a>
+      </div>
+    </div>
+
+    <div class="blog-card">
+      <div class="blog-top" style="background:linear-gradient(90deg,#A855F7,#38BDF8)"></div>
+      <div class="blog-body">
+        <span class="blog-tag" style="background:#A855F7">Cybersecurity</span>
+        <h3>5 Cybersecurity Mistakes New Small Businesses Make — And How to Avoid Them</h3>
+        <p>From weak passwords to no email authentication — these simple mistakes cost small businesses thousands every year.</p>
+      </div>
+      <div class="blog-footer">
+        <span class="blog-author">Digital Business Hub</span>
+        <a href="#contact" class="blog-link">Read more →</a>
+      </div>
+    </div>
+
+    <div class="blog-card">
+      <div class="blog-top" style="background:linear-gradient(90deg,#00C896,#A855F7)"></div>
+      <div class="blog-body">
+        <span class="blog-tag">Email Setup</span>
+        <h3>Why info@gmail.com Is Hurting Your Business — And How to Fix It in One Hour</h3>
+        <p>Clients judge your credibility by your email address. Here is how to set up a professional domain email fast.</p>
+      </div>
+      <div class="blog-footer">
+        <span class="blog-author">Digital Business Hub</span>
+        <a href="#contact" class="blog-link">Read more →</a>
+      </div>
+    </div>
+
+    <div class="blog-card">
+      <div class="blog-top" style="background:linear-gradient(90deg,#38BDF8,#F5A623)"></div>
+      <div class="blog-body">
+        <span class="blog-tag" style="background:#38BDF8">Canada</span>
+        <h3>Launching a Business in Canada as an Immigrant — What You Need and Where to Start</h3>
+        <p>A plain-language guide covering business registration, address requirements, phone, website, and email for new Canadian entrepreneurs.</p>
+      </div>
+      <div class="blog-footer">
+        <span class="blog-author">Digital Business Hub</span>
+        <a href="#contact" class="blog-link">Read more →</a>
+      </div>
+    </div>
+
+  </div>
+  <div class="newsletter-box">
+    <h3>📬 Free Business Launch Tips — Weekly</h3>
+    <p>Get practical guides for launching and growing your business in English or French. No spam, ever.</p>
+    <div class="newsletter-form">
+      <input class="newsletter-input" type="email" placeholder="your@email.com" id="nlEmail"/>
+      <button class="newsletter-btn" onclick="
+        const v=document.getElementById('nlEmail').value;
+        if(v){this.textContent='✓ Subscribed!';this.style.background='#7EE8A2';this.disabled=true;}
+      ">Subscribe Free</button>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT ── -->
+<section id="contact">
+  <div class="contact-inner">
+    <div class="section-label">Get In Touch</div>
+    <div class="divider" style="margin:0 auto 18px"></div>
+    <h2 class="section-title">Start Your Free Consultation</h2>
+    <p class="section-sub" style="margin:0 auto 8px">Tell us about your business. We'll recommend the perfect package and answer every question — at no cost.</p>
+    <div class="lang-badge">
+      <span>🇺🇸 English</span>
+      <span>🇫🇷 Français</span>
+    </div>
+    <div class="contact-form">
+      <div class="form-row">
+        <input class="form-input" type="text" placeholder="Your Name / Votre Nom"/>
+        <input class="form-input" type="text" placeholder="Business Name (if any)"/>
+      </div>
+      <div class="form-row">
+        <input class="form-input" type="email" placeholder="Email Address"/>
+        <input class="form-input" type="tel" placeholder="Phone Number (optional)"/>
+      </div>
+      <select class="form-input">
+        <option value="" disabled selected>What do you need? / Qu'avez-vous besoin?</option>
+        <option>Domain Registration</option>
+        <option>Website Design &amp; Hosting</option>
+        <option>Business Email Setup</option>
+        <option>Toll-Free Phone Number</option>
+        <option>AI Receptionist Setup</option>
+        <option>Virtual Business Address</option>
+        <option>Cybersecurity Protection</option>
+        <option>Complete Business Launch Package</option>
+        <option>I'm not sure — I need guidance</option>
+      </select>
+      <select class="form-input">
+        <option value="" disabled selected>Country / Pays</option>
+        <option>United States 🇺🇸</option>
+        <option>Canada 🇨🇦</option>
+        <option>Other</option>
+      </select>
+      <textarea class="form-input" placeholder="Tell us briefly about your business and what you need... / Décrivez brièvement votre entreprise et vos besoins..."></textarea>
+      <button class="form-submit" onclick="this.textContent='✓ Received! We will contact you within 24 hours.';this.style.background='#7EE8A2';this.disabled=true">Request Free Consultation →</button>
+      <p class="contact-note">We respond within one business day in English or French. Your information is never shared or sold.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="nav-logo" style="margin-bottom:12px">
+        <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+          <circle cx="40" cy="40" r="36" fill="#0F1E38" stroke="#00C896" stroke-width="2"/>
+          <circle cx="40" cy="40" r="7" fill="#00C896"/>
+          <circle cx="40" cy="14" r="5" fill="#38BDF8"/>
+          <circle cx="62" cy="26" r="5" fill="#38BDF8"/>
+          <circle cx="62" cy="54" r="5" fill="#38BDF8"/>
+          <circle cx="40" cy="66" r="5" fill="#38BDF8"/>
+          <circle cx="18" cy="54" r="5" fill="#38BDF8"/>
+          <circle cx="18" cy="26" r="5" fill="#38BDF8"/>
+          <line x1="40" y1="33" x2="40" y2="19" stroke="#00C896" stroke-width="1.8" stroke-opacity=".7"/>
+          <line x1="46" y1="36" x2="57" y2="29" stroke="#00C896" stroke-width="1.8" stroke-opacity=".7"/>
+          <line x1="46" y1="44" x2="57" y2="51" stroke="#00C896" stroke-width="1.8" stroke-opacity=".7"/>
+          <line x1="40" y1="47" x2="40" y2="61" stroke="#00C896" stroke-width="1.8" stroke-opacity=".7"/>
+          <line x1="34" y1="44" x2="23" y2="51" stroke="#00C896" stroke-width="1.8" stroke-opacity=".7"/>
+          <line x1="34" y1="36" x2="23" y2="29" stroke="#00C896" stroke-width="1.8" stroke-opacity=".7"/>
+          <text x="40" y="44" text-anchor="middle" font-family="Arial" font-weight="900" font-size="8" fill="#FFFFFF">DBH</text>
+        </svg>
+        <span style="font-size:.95rem">Digital Business <span style="color:var(--emerald)">Hub</span> LLC</span>
+      </div>
+      <p>Helping entrepreneurs across the US and Canada launch complete, professional, and secure businesses — in English and French.</p>
+      <div style="margin-top:14px;display:flex;gap:8px;flex-wrap:wrap">
+        <span style="font-size:.72rem;padding:3px 12px;border:1px solid var(--border);border-radius:20px;color:var(--silver)">🇺🇸 English</span>
+        <span style="font-size:.72rem;padding:3px 12px;border:1px solid var(--border);border-radius:20px;color:var(--silver)">🇫🇷 Français</span>
+        <span style="font-size:.72rem;padding:3px 12px;border:1px solid var(--border);border-radius:20px;color:var(--silver)">🇨🇦 Canada</span>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">Domain Registration</a></li>
+        <li><a href="#services">Website &amp; Hosting</a></li>
+        <li><a href="#services">Business Email</a></li>
+        <li><a href="#services">800 Phone Number</a></li>
+        <li><a href="#services">AI Receptionist</a></li>
+        <li><a href="#services">Virtual Address</a></li>
+        <li><a href="#services">Cybersecurity</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#how">How It Works</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#clients">Who We Serve</a></li>
+        <li><a href="#why">Why Choose Us</a></li>
+        <li><a href="#markets">Our Markets</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="#contact">Terms of Service</a></li>
+        <li><a href="#contact">Privacy Policy</a></li>
+        <li><a href="#contact">Refund Policy</a></li>
+        <li><a href="#contact">Acceptable Use</a></li>
+        <li><a href="#contact">CASL Compliance</a></li>
+        <li><a href="#contact">AI Call Disclosure</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Digital Business Hub LLC · Washington State · All rights reserved.</p>
+    <p class="footer-tagline">Launch &nbsp;·&nbsp; Connect &nbsp;·&nbsp; Grow Securely</p>
+  </div>
+</footer>
+
+<script>
+// Hamburger menu
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburger.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+
+// Smooth scroll with nav offset
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      window.scrollTo({ top: target.offsetTop - 70, behavior: 'smooth' });
+      mobileMenu.classList.remove('open');
+    }
+  });
+});
+
+// Scroll-triggered animations
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = '1';
+      entry.target.style.transform = 'translateY(0)';
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll(
+  '.service-card,.why-card,.price-card,.client-chip,.step-card,.blog-card,.market-list li'
+).forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(22px)';
+  el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+  observer.observe(el);
+});
+
+// Nav background on scroll
+window.addEventListener('scroll', () => {
+  const nav = document.querySelector('nav');
+  nav.style.background = window.scrollY > 50
+    ? 'rgba(11,17,32,0.99)'
+    : 'rgba(11,17,32,0.96)';
+});
+</script>
+</body>
+</html>
